@@ -1,7 +1,8 @@
 document.getElementsByTagName('button')[0].addEventListener("click", function () {
     const apiKey = '878b41b264b178e82230359d4555f65d'
     const city = document.getElementById('weathercity').value;
-    const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`;
+    const url = `https://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`;
+;
 
     if (city === '') {
         alert("Enter the city name to display the weather!");
@@ -63,4 +64,5 @@ document.getElementsByTagName('button')[0].addEventListener("click", function ()
         .catch(error => {
             document.getElementById('weatheroutput').innerHTML = '<p>Error fetching Weather'
         })
+
 })
